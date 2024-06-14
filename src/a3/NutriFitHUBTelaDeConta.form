@@ -70,16 +70,16 @@
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="216" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="Nome" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="JTextFieldNome" min="-2" pref="400" max="-2" attributes="0"/>
                               <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="email" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="JTextFieldEmail" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                               <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="confimar_Email" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="JTextFieldConfimar_Email" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                               <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="senha" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="JTextFieldSenha" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                               <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="confimar_Senha" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
+                              <Component id="JTextFieldConfimar_Senha" alignment="0" min="-2" pref="400" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="241" max="32767" attributes="0"/>
                       </Group>
@@ -109,23 +109,23 @@
                   <EmptySpace pref="71" max="32767" attributes="0"/>
                   <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="Nome" min="-2" max="-2" attributes="0"/>
+                  <Component id="JTextFieldNome" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="email" min="-2" max="-2" attributes="0"/>
+                  <Component id="JTextFieldEmail" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                   <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="confimar_Email" min="-2" max="-2" attributes="0"/>
+                  <Component id="JTextFieldConfimar_Email" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="senha" min="-2" max="-2" attributes="0"/>
+                  <Component id="JTextFieldSenha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="confimar_Senha" min="-2" max="-2" attributes="0"/>
+                  <Component id="JTextFieldConfimar_Senha" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   <Component id="crair_Conta" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
@@ -157,7 +157,7 @@
             <Property name="text" type="java.lang.String" value="Insira seu Email"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="email">
+        <Component class="javax.swing.JTextField" name="JTextFieldEmail">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -167,7 +167,7 @@
             <Property name="text" type="java.lang.String" value="Insira sua senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="senha">
+        <Component class="javax.swing.JTextField" name="JTextFieldSenha">
         </Component>
         <Component class="javax.swing.JButton" name="crair_Conta">
           <Properties>
@@ -188,7 +188,7 @@
             <Property name="text" type="java.lang.String" value="Insira seu Nome"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="confimar_Email">
+        <Component class="javax.swing.JTextField" name="JTextFieldConfimar_Email">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>
@@ -198,7 +198,7 @@
             <Property name="text" type="java.lang.String" value="Confirme seu Email"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="Nome">
+        <Component class="javax.swing.JTextField" name="JTextFieldNome">
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
@@ -208,7 +208,7 @@
             <Property name="text" type="java.lang.String" value="Confirme sua Senha"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="confimar_Senha">
+        <Component class="javax.swing.JTextField" name="JTextFieldConfimar_Senha">
         </Component>
       </SubComponents>
     </Container>

@@ -113,11 +113,11 @@
               </Group>
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="188" max="-2" attributes="0"/>
-                  <Component id="jButton2" min="-2" pref="149" max="-2" attributes="0"/>
+                  <Component id="jButton_Iniciante" min="-2" pref="149" max="-2" attributes="0"/>
                   <EmptySpace pref="297" max="32767" attributes="0"/>
-                  <Component id="jButton3" min="-2" pref="163" max="-2" attributes="0"/>
+                  <Component id="jButtonTela_inicial" min="-2" pref="163" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="289" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="195" max="-2" attributes="0"/>
+                  <Component id="jButtonPontosFracos" min="-2" pref="195" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="213" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -195,9 +195,9 @@
                       <Group type="102" alignment="1" attributes="0">
                           <EmptySpace max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton1" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                              <Component id="jButton3" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                              <Component id="jButton2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="jButtonPontosFracos" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="jButtonTela_inicial" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                              <Component id="jButton_Iniciante" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                       </Group>
@@ -466,7 +466,7 @@
             <Property name="text" type="java.lang.String" value="um bom treino, busque sempre melhorar."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="jButtonTela_inicial">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="ff" red="ff" type="rgb"/>
@@ -476,8 +476,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="TELA INICIAL"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonTela_inicialActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jButtonPontosFracos">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="ff" red="ff" type="rgb"/>
@@ -487,8 +490,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="PONTOS FRACOS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPontosFracosActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="jButton_Iniciante">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="66" green="ff" red="ff" type="rgb"/>
@@ -498,6 +504,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="INICIANTE"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_InicianteActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

@@ -38,10 +38,10 @@ public class PerdePeso extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButtonTelaIncialNutriFitHUB = new javax.swing.JButton();
+        jButtonGanharPeso = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButtonDieta = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,20 +80,35 @@ public class PerdePeso extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel11.setText("Gorduras: azeite, peixe, abacate, nozes.");
 
-        jButton3.setBackground(new java.awt.Color(153, 153, 153));
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton3.setText("TELA INICIAL");
+        jButtonTelaIncialNutriFitHUB.setBackground(new java.awt.Color(153, 153, 153));
+        jButtonTelaIncialNutriFitHUB.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonTelaIncialNutriFitHUB.setText("TELA INICIAL");
+        jButtonTelaIncialNutriFitHUB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTelaIncialNutriFitHUBActionPerformed(evt);
+            }
+        });
 
-        jButton1.setBackground(new java.awt.Color(153, 153, 153));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton1.setText("GANHAR PESO");
+        jButtonGanharPeso.setBackground(new java.awt.Color(153, 153, 153));
+        jButtonGanharPeso.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonGanharPeso.setText("GANHAR PESO");
+        jButtonGanharPeso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonGanharPesoActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel12.setText("uma boa dieta ja e necessario para você perde peso, mas so treino não adiante então e preciso ter o dois.");
 
-        jButton2.setBackground(new java.awt.Color(153, 153, 153));
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton2.setText("DIETA");
+        jButtonDieta.setBackground(new java.awt.Color(153, 153, 153));
+        jButtonDieta.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonDieta.setText("DIETA");
+        jButtonDieta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonDietaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,11 +122,11 @@ public class PerdePeso extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel11)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonDieta, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(307, 307, 307)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonTelaIncialNutriFitHUB, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(jButtonGanharPeso)
                         .addGap(259, 259, 259))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -164,9 +179,9 @@ public class PerdePeso extends javax.swing.JFrame {
                 .addComponent(jLabel11)
                 .addGap(102, 102, 102)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonDieta, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonTelaIncialNutriFitHUB, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonGanharPeso, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(112, Short.MAX_VALUE))
         );
 
@@ -183,6 +198,21 @@ public class PerdePeso extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonDietaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonDietaActionPerformed
+      Dieta Dieta = new Dieta();
+      Dieta.setVisible(true);
+    }//GEN-LAST:event_jButtonDietaActionPerformed
+
+    private void jButtonGanharPesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGanharPesoActionPerformed
+       GanharPeso GanharPeso = new GanharPeso();
+       GanharPeso.setVisible(true);
+    }//GEN-LAST:event_jButtonGanharPesoActionPerformed
+
+    private void jButtonTelaIncialNutriFitHUBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTelaIncialNutriFitHUBActionPerformed
+        TelaIncialNutriFitHUB TelaIncialNutriFitHUB = new TelaIncialNutriFitHUB();
+        TelaIncialNutriFitHUB.setVisible(true);
+    }//GEN-LAST:event_jButtonTelaIncialNutriFitHUBActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,9 +250,9 @@ public class PerdePeso extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonDieta;
+    private javax.swing.JButton jButtonGanharPeso;
+    private javax.swing.JButton jButtonTelaIncialNutriFitHUB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

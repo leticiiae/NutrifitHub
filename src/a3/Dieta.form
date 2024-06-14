@@ -71,11 +71,11 @@
               </Group>
               <Group type="102" attributes="0">
                   <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonGanharPeso" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="375" max="-2" attributes="0"/>
-                  <Component id="jButton3" min="-2" pref="163" max="-2" attributes="0"/>
+                  <Component id="jButtonTelaIncialNutriFitHUB" min="-2" pref="163" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButtonPerdePeso" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
               </Group>
               <Group type="102" alignment="1" attributes="0">
@@ -113,9 +113,9 @@
                   <Component id="jLabel9" min="-2" pref="288" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton3" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                      <Component id="jButton2" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
-                      <Component id="jButton1" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="jButtonTelaIncialNutriFitHUB" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="jButtonPerdePeso" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
+                      <Component id="jButtonGanharPeso" alignment="3" min="-2" pref="57" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="122" max="32767" attributes="0"/>
               </Group>
@@ -181,7 +181,7 @@
             <Property name="text" type="java.lang.String" value="que ajudam na produ&#xe7;&#xe3;o de hormonios como a testorena que vai melhorar seu ganho de musculos."/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jButtonGanharPeso">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -191,8 +191,11 @@
             </Property>
             <Property name="text" type="java.lang.String" value="GANHAR PESO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonGanharPesoActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="jButtonPerdePeso">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -202,6 +205,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="PERDE PESO"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPerdePesoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
@@ -210,7 +216,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="jButtonTelaIncialNutriFitHUB">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="99" green="99" red="99" type="rgb"/>
@@ -220,6 +226,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="TELA INICIAL"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonTelaIncialNutriFitHUBActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

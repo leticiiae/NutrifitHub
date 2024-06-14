@@ -53,9 +53,9 @@ public class SeuTreinoEBom extends javax.swing.JFrame {
         jLabel24 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonTela_inicial = new javax.swing.JButton();
+        jButtonPontosFracos = new javax.swing.JButton();
+        jButton_Iniciante = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -155,17 +155,32 @@ public class SeuTreinoEBom extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Segoe UI Black", 0, 14)); // NOI18N
         jLabel26.setText("um bom treino, busque sempre melhorar.");
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 102));
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton3.setText("TELA INICIAL");
+        jButtonTela_inicial.setBackground(new java.awt.Color(255, 255, 102));
+        jButtonTela_inicial.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonTela_inicial.setText("TELA INICIAL");
+        jButtonTela_inicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTela_inicialActionPerformed(evt);
+            }
+        });
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 102));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton1.setText("PONTOS FRACOS");
+        jButtonPontosFracos.setBackground(new java.awt.Color(255, 255, 102));
+        jButtonPontosFracos.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonPontosFracos.setText("PONTOS FRACOS");
+        jButtonPontosFracos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPontosFracosActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton2.setText("INICIANTE");
+        jButton_Iniciante.setBackground(new java.awt.Color(255, 255, 102));
+        jButton_Iniciante.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButton_Iniciante.setText("INICIANTE");
+        jButton_Iniciante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_InicianteActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -228,11 +243,11 @@ public class SeuTreinoEBom extends javax.swing.JFrame {
                 .addGap(614, 614, 614))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(188, 188, 188)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButton_Iniciante, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 297, Short.MAX_VALUE)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonTela_inicial, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(289, 289, 289)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonPontosFracos, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(213, 213, 213))
         );
         jPanel1Layout.setVerticalGroup(
@@ -295,9 +310,9 @@ public class SeuTreinoEBom extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonPontosFracos, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonTela_inicial, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton_Iniciante, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(64, 64, 64))))
         );
 
@@ -314,6 +329,21 @@ public class SeuTreinoEBom extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonTela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTela_inicialActionPerformed
+       TelaIncialNutriFitHUB TelaIncialNutriFitHUB = new TelaIncialNutriFitHUB();
+       TelaIncialNutriFitHUB.setVisible(true);
+    }//GEN-LAST:event_jButtonTela_inicialActionPerformed
+
+    private void jButtonPontosFracosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPontosFracosActionPerformed
+      PontosFracos PontosFracos = new PontosFracos();
+      PontosFracos.setVisible(true);
+    }//GEN-LAST:event_jButtonPontosFracosActionPerformed
+
+    private void jButton_InicianteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_InicianteActionPerformed
+        Treinos Treinos = new Treinos();
+        Treinos.setVisible(true);
+    }//GEN-LAST:event_jButton_InicianteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -351,9 +381,9 @@ public class SeuTreinoEBom extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonPontosFracos;
+    private javax.swing.JButton jButtonTela_inicial;
+    private javax.swing.JButton jButton_Iniciante;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

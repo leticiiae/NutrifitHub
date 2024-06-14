@@ -5,6 +5,10 @@
 package a3;
 
 import a3.login.controller.loginController;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTextField;
 
 /**
@@ -34,16 +38,16 @@ public class NutriFitHUBTelaDeConta extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
+        JTextFieldEmail = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        senha = new javax.swing.JTextField();
+        JTextFieldSenha = new javax.swing.JTextField();
         crair_Conta = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        confimar_Email = new javax.swing.JTextField();
+        JTextFieldConfimar_Email = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        Nome = new javax.swing.JTextField();
+        JTextFieldNome = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        confimar_Senha = new javax.swing.JTextField();
+        JTextFieldConfimar_Senha = new javax.swing.JTextField();
 
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
         jLabel7.setText("Confirme seu Email");
@@ -91,16 +95,16 @@ public class NutriFitHUBTelaDeConta extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(216, 216, 216)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Nome, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5)
                             .addComponent(jLabel3)
-                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6)
-                            .addComponent(confimar_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTextFieldConfimar_Email, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4)
-                            .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(JTextFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel8)
-                            .addComponent(confimar_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(JTextFieldConfimar_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 241, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,23 +125,23 @@ public class NutriFitHUBTelaDeConta extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Nome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confimar_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTextFieldConfimar_Email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTextFieldSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(confimar_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(JTextFieldConfimar_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
                 .addComponent(crair_Conta)
                 .addGap(115, 115, 115))
@@ -164,33 +168,40 @@ public class NutriFitHUBTelaDeConta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void crair_ContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crair_ContaActionPerformed
-        loginController cadastro = new loginController();
-        cadastro.cadastroUsuario(this);
+        try {
+            loginController cadastro = new loginController();
+            cadastro.cadastroUsuario(this);
+            
+        } catch (SQLException sql) {
+            
+        } catch (IOException ex) { 
+            Logger.getLogger(NutriFitHUBTelaDeConta.class.getName()).log(Level.SEVERE, null, ex);
+        }
         this.setVisible(false);
     }//GEN-LAST:event_crair_ContaActionPerformed
 
-    public JTextField getNome() {
-        return Nome;
+     public JTextField getJTextFieldNome() {
+        return JTextFieldNome;
     }
 
-    public void setNome(JTextField Nome) {
-        this.Nome = Nome;
+    public void setJTextFieldNome(JTextField JTextFieldNome) {
+        this.JTextFieldNome = JTextFieldNome;
+    }
+    
+    public JTextField getJTextFieldEmail() {
+        return JTextFieldEmail;
     }
 
-    public JTextField getEmail() {
-        return email;
+    public void setJTextFieldEmail(JTextField JTextFieldEmail) {
+        this.JTextFieldEmail = JTextFieldEmail;
     }
 
-    public void setEmail(JTextField email) {
-        this.email = email;
+    public JTextField getJTextFieldSenha() {
+        return JTextFieldSenha;
     }
 
-    public JTextField getSenha() {
-        return senha;
-    }
-
-    public void setSenha(JTextField senha) {
-        this.senha = senha;
+    public void setJTextFieldSenha(JTextField JTextFieldSenha) {
+        this.JTextFieldSenha = JTextFieldSenha;
     }
 
     
@@ -232,11 +243,12 @@ public class NutriFitHUBTelaDeConta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Nome;
-    private javax.swing.JTextField confimar_Email;
-    private javax.swing.JTextField confimar_Senha;
+    private javax.swing.JTextField JTextFieldConfimar_Email;
+    private javax.swing.JTextField JTextFieldConfimar_Senha;
+    private javax.swing.JTextField JTextFieldEmail;
+    private javax.swing.JTextField JTextFieldNome;
+    private javax.swing.JTextField JTextFieldSenha;
     private javax.swing.JButton crair_Conta;
-    private javax.swing.JTextField email;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -246,6 +258,5 @@ public class NutriFitHUBTelaDeConta extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField senha;
     // End of variables declaration//GEN-END:variables
 }

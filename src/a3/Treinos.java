@@ -34,9 +34,9 @@ public class Treinos extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jButtonPontosFracos = new javax.swing.JButton();
+        jButtonSeuTreinoBom = new javax.swing.JButton();
+        jButtonTela_inicial = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,17 +60,32 @@ public class Treinos extends javax.swing.JFrame {
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/a3/main-qimg-8dac4a6afc1cc473c42a617846438ece-pjlq.jpg"))); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 102));
-        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton1.setText("PONTOS FRACOS");
+        jButtonPontosFracos.setBackground(new java.awt.Color(255, 255, 102));
+        jButtonPontosFracos.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonPontosFracos.setText("PONTOS FRACOS");
+        jButtonPontosFracos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPontosFracosActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 102));
-        jButton2.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton2.setText("SEU TREINO E BOM?");
+        jButtonSeuTreinoBom.setBackground(new java.awt.Color(255, 255, 102));
+        jButtonSeuTreinoBom.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonSeuTreinoBom.setText("SEU TREINO E BOM?");
+        jButtonSeuTreinoBom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSeuTreinoBomActionPerformed(evt);
+            }
+        });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 102));
-        jButton3.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
-        jButton3.setText("TELA INICIAL");
+        jButtonTela_inicial.setBackground(new java.awt.Color(255, 255, 102));
+        jButtonTela_inicial.setFont(new java.awt.Font("Segoe UI Black", 0, 18)); // NOI18N
+        jButtonTela_inicial.setText("TELA INICIAL");
+        jButtonTela_inicial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTela_inicialActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -91,12 +106,11 @@ public class Treinos extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(171, 171, 171)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jButtonPontosFracos, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(312, 312, 312)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonTela_inicial, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(309, 309, 309)
-                .addComponent(jButton2)
+                .addComponent(jButtonSeuTreinoBom)
                 .addGap(145, 145, 145))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,9 +148,9 @@ public class Treinos extends javax.swing.JFrame {
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 355, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(78, 78, 78)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonPontosFracos, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonSeuTreinoBom, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonTela_inicial, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(72, 72, 72))
@@ -147,18 +161,36 @@ public class Treinos extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonSeuTreinoBomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeuTreinoBomActionPerformed
+       SeuTreinoEBom tela = new SeuTreinoEBom();
+       tela.setVisible(true);
+    }//GEN-LAST:event_jButtonSeuTreinoBomActionPerformed
+
+    private void jButtonTela_inicialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTela_inicialActionPerformed
+        TelaIncialNutriFitHUB telaInicial = new TelaIncialNutriFitHUB();
+        telaInicial.setVisible(true);
+    }//GEN-LAST:event_jButtonTela_inicialActionPerformed
+
+    private void jButtonPontosFracosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPontosFracosActionPerformed
+        PontosFracos telaPontosFracos = new PontosFracos();
+        telaPontosFracos.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonPontosFracosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,9 +228,9 @@ public class Treinos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonPontosFracos;
+    private javax.swing.JButton jButtonSeuTreinoBom;
+    private javax.swing.JButton jButtonTela_inicial;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

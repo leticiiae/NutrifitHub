@@ -10,6 +10,7 @@ package a3;
  */
 public class NutriFibHUB extends javax.swing.JFrame {
 
+   
     /**
      * Creates new form NutriFibHUB
      */
@@ -144,6 +145,8 @@ public class NutriFibHUB extends javax.swing.JFrame {
   
         NutriFitHUBTelaDeConta telaDeCadastro = new NutriFitHUBTelaDeConta();
         telaDeCadastro.setVisible(true);
+        
+        
     }//GEN-LAST:event_criar_ContaMouseClicked
 
     private void entraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_entraActionPerformed
